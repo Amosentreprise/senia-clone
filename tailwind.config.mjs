@@ -9,7 +9,18 @@ export default {
 				gradient3: "#1d459d",
 			  },
 			  fontFamily: {
-				poppins: ["Poppins", "sans-serif"],
+				monteserrat: ["Montserrat", "sans-serif"],
+				
+			  },
+			  screens: {
+        
+                sm:"320px",
+				md: "764px",
+				// => @media (min-width: 768px) { ... }
+
+				lg: "1026px",
+		  
+			   
 				
 			  },
 		},
