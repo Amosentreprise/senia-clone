@@ -1,0 +1,16 @@
+---
+ interface Props {
+	image: string;
+ 	
+ }
+
+const {image} = Astro.props;
+---
+
+<div class="sm:[80%] md:w-[60%] lg:w-[30%]" data-aos="zoom-in" data-aos-easing="linear"
+data-aos-duration="800">
+	<div class="">
+        <img src={image} alt="" class=" object-cover">
+	</div>
+	
+</div>

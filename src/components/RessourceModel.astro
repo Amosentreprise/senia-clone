@@ -1,0 +1,24 @@
+---
+interface Props{
+    img:string;
+    titre:string;
+
+}
+const {img, titre} = Astro.props;
+---
+
+<div class="sm:w-[80%] md:w-[80%] lg:w-[40%] flex flex-col space-y-2 bg-white">
+    <img src={img} alt="" class="w-full h-auto">
+   <div class="">
+    <h2 class="font-bold p-4">{titre}</h2>
+    <a href="" class="text-sm text-gradient1 p-4">Lire la suite >></a>
+    <div class="mt-5">
+        <hr class="w-full h-[2px] bg-[#747474]"/>
+
+        <p class="p-4">25 avril 2024 . Aucun commentaire</p>
+
+    </div>
+   </div>
+   
+
+</div>

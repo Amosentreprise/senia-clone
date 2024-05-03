@@ -10,6 +10,7 @@ export default {
 			  },
 			  fontFamily: {
 				monteserrat: ["Montserrat", "sans-serif"],
+				archivo: ["Archivo" , "sans-serif"],
 				
 			  },
 			  screens: {

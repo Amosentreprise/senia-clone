@@ -1,0 +1,22 @@
+---
+interface Props {
+    title : string;
+    contenu:string;
+    button:string;
+    color:string;
+    title2:string;
+    title3:string;
+    contenu2:string;
+
+}
+const {title, contenu, button, color, title2, title3, contenu2} = Astro.props;
+---
+<div class=`w-[80%] border border-${color} border-l-8 flex flex-col items-start space-y-2 rounded-2xl p-8` data-aos="fade-right" data-aos-easing="linear"
+data-aos-duration="700">
+    <h2 class=`text-gradient1 text-sm uppercase font-[600]`>{title}</h2>
+    <h3 class="font-[600] text-sm uppercase">{title2}</h3>
+    <p>{contenu}</p>
+    <button class="text-sm uppercase inline-block my-6 text-white font-[500] bg-gradient-to-r from-gradient3 from-0% via-gradient2 via-45% to-[#df0838] to-90% hover:bg-gradient-to-r hover:from-[#df0838] hover:from-0%  hover:via-gradient2 hover:via-45% hover:to-gradient3 hover:to-90% transition-all ease-in  p-2 rounded-l-full rounded-tr-full text-center">{button}</button>
+     <h3 class="font-[600] text-sm uppercase">{title3}</h3>
+     <p>{contenu2}</p>
+</div>

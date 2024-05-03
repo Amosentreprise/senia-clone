@@ -1,3 +1,60 @@
 ---
+import Card from "./Card.astro"
+const cards = [
+    {
+        numero: "01.",
+        icone:"ri-share-line",
+        title:"PARTAGE",
+        contenu:"Faciliter l’échange de connaissances en créant un environnement propice aux partages de connaissances entre les experts en IA, les entrepreneurs et les chercheurs et réaliser des sessions interactives, des ateliers et des présentations qui démystifient les concepts clés de l’IA pour les entrepreneurs."
+    },
+    {
+        numero: "02.",
+        icone:"ri-hand-heart-fill",
+        title:"COLLABORATION",
+        contenu:"Promouvoir la collaboration interdisciplinaire en favorisant la collaboration entre les professionnels de l’IA, les entrepreneurs et les décideurs issus de secteurs variés et des sessions de réseautage pour catalyser de nouvelles alliances et partenariats interdisciplinaires."
+    },
+    {
+        numero: "03.",
+        icone:"ri-magic-line",
+        title:"VALORISATION",
+        contenu:"Mettre en lumière les cas d’utilisation réussis en présentant des études de cas inspirantes illustrant l’intégration réussie de l’IA dans des projets entrepreneuriaux et en mettant en avant des exemples concrets démontrant la valeur ajoutée de l’IA dans la création et la croissance des entreprises."
+    },
+    {
+        numero: "04.",
+        icone:"ri-information-line",
+        title:"OPPORTUNITÉS",
+        contenu:"Catalyser des opportunités d’investissement en facilitant les rencontres entre entrepreneurs prometteurs et investisseurs intéressés par les initiatives liées à l’IA."
+    },
+    {
+        numero: "05.",
+        icone:"ri-find-replace-line",
+        title:"DÉCOUVERTE",
+        contenu:"Créer un Espace Démo pour les Start-ups à travers une zone dédiée aux start-ups pour présenter leurs innovations basées sur l’IA et permettre aux jeunes entreprises de recevoir des retours constructifs de la part d’experts, d’investisseurs et de pairs."
+    },
+    {
+        numero: "06.",
+        icone:"ri-share-line",
+        title:"RÉSEAUTAGE",
+        contenu:"Établir des Connexions Internationales en favorisant des partenariats internationaux en vue de créer des opportunités de collaborations transfrontalières pour promouvoir une perspective mondiale dans l’entrepreneuriat numérique et l’IA."
+    },
 
+]
 ---
+
+<section class="w-[80%] mx-auto">
+    <div class=" bg-white py-2 w-full flex">
+
+    <h2 class="text-xl p-2 rounded-l-full rounded-tr-full text-center uppercase inline-block mx-auto my-6 text-white font-[500] bg-gradient-to-r from-gradient3 from-0% via-gradient2 via-45% to-[#df0838] to-90% hover:bg-gradient-to-r hover:from-[#df0838] hover:from-0%  hover:via-gradient2 hover:via-45% hover:to-gradient3 hover:to-90% transition-all ease-in ">Les objectifs spécifiques du senia 2024</h2>
+   </div>
+    <div class="flex justify-between my-7 flex-wrap gap-4">
+        {
+            cards.map((card)=>{
+               return (
+                <Card numero={card.numero} title={card.title} contenu={card.contenu} icone={card.icone}/>
+                )
+            })
+        }
+       
+        
+    </div>
+</section>

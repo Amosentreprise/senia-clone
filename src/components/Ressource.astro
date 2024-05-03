@@ -1,0 +1,78 @@
+---
+import RessourceModel from "./RessourceModel.astro"
+  const ressources = [
+    {
+        img:"/ressource1.jpg",
+        titre:"programme du senia 2024",
+    },
+    {
+        img:"/ressource2.jpg",
+        titre:"FORMULAIRE DE RESERVATION DE STAND SENIA 2024",
+    },
+    {
+        img:"/ressource3.jpg",
+        titre:"formulaire de sponsoring SENAI 2024",
+    },
+    {
+        img:"/ressource4.jpg",
+        titre:"formulaire d'inscription des delegués SENIA 2024",
+    },
+    {
+        img:"/ressource5.jpg",
+        titre:"guide de participation senia 2024",
+    },
+    {
+        img:"/ressource6.jpg",
+        titre:"dossier de presentation senia 2024",
+    }
+  ]
+---
+<section class="bg-slate-200 w-[80%] mx-auto p-3">
+
+    <div class="w-full flex justify-between  flex-wrap gap-5 items-start">
+        <div class=" lg:w-1/2 md:w-full sm:w-full"> 
+            <div class="flex gap-2 flex-wrap">
+                {
+                   ressources.map((ressource)=> {
+                       return (
+                         <RessourceModel titre={ressource.titre} img={ressource.img}/>
+                       )
+                   })
+                }
+   
+           </div>
+        </div>
+       
+        <div class="flex flex-col gap-4">
+            <div class="w-full bg-white h-auto p-3">
+                <div class="flex">
+                 <input type="search" placeholder="rechercher" name="" id="" class="p-3 outline-none bg-slate-200 rounded-md"><span class="bg-gradient1 rounded-r-full text-white p-3 text-xl flex justify-center items-center"><i class="ri-search-line"></i></span>
+                </div>
+                <h2 class="text-xl font-bold text-black">Récemment</h2>
+
+                <ul class="text-black space-y-2">
+                    <li><span class=" text-[#747474] text-sm"><i class="ri-time-fill"></i>25 AVRIL 2024</span></li>
+                    <li><span class=" hover:text-gradient1">Programme du senia</span></li>
+                    <li><span class=" text-[#747474] text-sm"><i class="ri-time-fill"></i>25 AVRIL 2024</span></li>
+                    <li><span class=" hover:text-gradient1">Formulaire de reservation de stand senia 2024</span></li>
+                    <li><span class=" text-[#747474] text-sm"><i class="ri-time-fill"></i>25 AVRIL 2024</span></li>
+                    <li><span class=" hover:text-gradient1">Formulaire de sponsoring 2024</span></li>
+                </ul>
+
+            </div>
+            <div class="w-full bg-white h-auto p-3 text-black">
+                <h2 class="font-bold text-xl">Catégories</h2>
+                <ul class="flex flex-col space-y-2">
+                    <li><span class="text-gradient1 text-xl"><i class="ri-arrow-right-s-fill"></i></span>SENIA 2024</li>
+                    <li><span class="text-gradient1 text-xl"><i class="ri-arrow-right-s-fill"></i></span> SENIA 2023</li>
+                    <li><span class="text-gradient1 text-xl"><i class="ri-arrow-right-s-fill"></i></span>SENIA 2022</li>
+                    
+                </ul>
+
+            </div>
+
+        </div> 
+
+    </div>
+
+</section>

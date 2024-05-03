@@ -1,0 +1,21 @@
+---
+interface Props {
+	
+ 	title: string;
+ 	contenu: string;
+	icone: string;
+ }
+
+const {icone, title, contenu } = Astro.props;
+---
+
+<div class="sm:w-[80%] md:w-[40%] lg:w-[30%] h-auto  p-10 border flex flex-col items-center space-y-3">
+    <div class="border-2 border-blue-800 border-dotted rounded-full p-3">
+       <div class=" border-2 border-blue-800 border-dashed  rounded-full p-2 transform hover:rotate-90 transition ease-in duration-700">
+          <span class="p-8 text-xl text-white w-12 h-12 bg-gradient-to-r from-gradient1  to-gradient3 to-90% flex items-center justify-center rounded-full "><i class={icone}></i></span>
+       </div>
+    </div>
+    <h2 class="text-gradient1">{title}</h2>
+    <p>{contenu}</p>
+
+</div>
