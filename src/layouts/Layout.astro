@@ -20,6 +20,21 @@ const { title } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Montserrat:wght@500&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         
+		<!-- Google tag (gtag.js) -->
+		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-KYHDLSPKNQ"></script>
+		<script is:inline>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KYHDLSPKNQ');
+		</script>
+		<meta property="og:image" content="https://senia-clone.surge.sh/logoicone.png" />
+		<meta
+		  name="description"
+		  content="Salon de l’Entrepreneuriat Numérique et de l’Intelligence Artificielle"
+		/>
+		<meta property="og:type" content="website"/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		

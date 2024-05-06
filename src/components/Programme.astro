@@ -8,23 +8,130 @@
         <p class="text-xl text-black font-[600] text-center">Découvrez le programme du SENIA 2024</p>
 
         
-        <div class="mx-auto flex gap-8 py-5" data-aos="fade-up"
+        <div class="mx-auto flex gap-8 py-5 flex-wrap px-2" data-aos="fade-up"
         data-aos-duration="1000">
-            <button class="text-sm py-4 text-white font-[500] bg-gradient-to-r from-gradient3 from-0% via-gradient2 via-45% to-[#df0838] to-90% hover:bg-gradient-to-r hover:from-gradient3 hover:from-0%  hover:via-45% hover:via-gradient2 hover:to-[#df0838] hover:to-90%  p-2 rounded-l-full rounded-tr-full">
+            <button id="jeudi" class="block sm:w-full md:w-auto lg:w-auto  text-sm py-4 hover:text-white text-white font-[500] bg-gradient-to-r from-gradient3 from-0% via-gradient2 via-45% to-[#df0838] to-90% hover:bg-gradient-to-r hover:from-gradient3 hover:from-0%  hover:via-45% hover:via-gradient2 hover:to-[#df0838] hover:to-90%  p-2 rounded-l-full rounded-tr-full">
                 JEUDI 16 MAI 2024
              </button>
-            <button class="text-sm py-4 uppercase text-black font-[500] bg-slate-200 hover:bg-gradient-to-r hover:from-gradient3 hover:from-0%  hover:via-45% hover:via-gradient2 hover:to-[#df0838] hover:to-90% hover:text-white p-2 rounded-l-full rounded-tr-full">
+            <button id="vendredi" class="block sm:w-full md:w-auto lg:w-auto  text-sm py-4 uppercase text-black font-[500] bg-slate-200 hover:bg-gradient-to-r hover:from-gradient3 hover:from-0%  hover:via-45% hover:via-gradient2 hover:to-[#df0838] hover:to-90% hover:text-white p-2 rounded-l-full rounded-tr-full">
                 vendredi 16 MAI 2024
              </button>
-            <button class="text-sm py-4 uppercase text-black font-[500] bg-slate-200 hover:bg-gradient-to-r hover:from-gradient3 hover:from-0%  hover:via-45% hover:via-gradient2 hover:to-[#df0838] hover:to-90% hover:text-white p-2 rounded-l-full rounded-tr-full">
+            <button id="download" class="block sm:w-full md:w-auto lg:w-auto  text-sm py-4 uppercase text-black font-[500] bg-slate-200 hover:bg-gradient-to-r hover:from-gradient3 hover:from-0%  hover:via-45% hover:via-gradient2 hover:to-[#df0838] hover:to-90% hover:text-white p-2 rounded-l-full rounded-tr-full">
                 télécharger
              </button>
         </div>
  
-        <div class="min-h-80 w-[80%] mx-auto bg-white my-2 shadow-md" data-aos="fade-up"
+        <div id="contenu" class="min-h-80 w-[80%] mx-auto bg-white my-2 shadow-md flex" data-aos="fade-up"
         data-aos-duration="1000">
+
+         <p class=" m-auto">Le programme de senia</p>
 
         </div>
     </div>
     
 </section>
+<script is:inline>
+    const jeudi = document.getElementById("jeudi");
+    const vendredi = document.getElementById("vendredi");
+    const download = document.getElementById("download");
+    const contenu = document.getElementById("contenu");
+
+    jeudi.addEventListener("click", ()=>{
+
+        jeudi.classList.add("bg-gradient-to-r")
+        jeudi.classList.add("from-gradient3")
+        jeudi.classList.add("from-0%")
+        jeudi.classList.add("via-gradient2")
+        jeudi.classList.add("via-45%")
+        jeudi.classList.add("to-[#df0838]")
+        jeudi.classList.add("text-white")
+
+        vendredi.classList.remove("bg-gradient-to-r")
+        vendredi.classList.remove("from-gradient3")
+        vendredi.classList.remove("from-0%")
+        vendredi.classList.remove("via-gradient2")
+        vendredi.classList.remove("via-45%")
+        vendredi.classList.remove("to-[#df0838]")
+        vendredi.classList.remove("text-white")
+
+        
+        download.classList.remove("bg-gradient-to-r")
+        download.classList.remove("from-gradient3")
+        download.classList.remove("from-0%")
+        download.classList.remove("via-gradient2")
+        download.classList.remove("via-45%")
+        download.classList.remove("to-[#df0838]")
+        download.classList.remove("text-white")
+        
+    })
+    vendredi.addEventListener("click", ()=>{
+       
+        vendredi.classList.add("bg-gradient-to-r")
+        vendredi.classList.add("from-gradient3")
+        vendredi.classList.add("from-0%")
+        vendredi.classList.add("via-gradient2")
+        vendredi.classList.add("via-45%")
+        vendredi.classList.add("to-[#df0838]")
+        vendredi.classList.add("text-white")
+
+        download.classList.remove("bg-gradient-to-r")
+        download.classList.remove("from-gradient3")
+        download.classList.remove("from-0%")
+        download.classList.remove("via-gradient2")
+        download.classList.remove("via-45%")
+        download.classList.remove("to-[#df0838]")
+        download.classList.remove("text-white")
+
+        
+        jeudi.classList.remove("bg-gradient-to-r")
+        jeudi.classList.remove("from-gradient3")
+        jeudi.classList.remove("from-0%")
+        jeudi.classList.remove("via-gradient2")
+        jeudi.classList.remove("via-45%")
+        jeudi.classList.remove("to-[#df0838]")
+        jeudi.classList.remove("text-white")
+        jeudi.classList.add("bg-slate-200")
+
+        contenu.innerHTML = `
+           <div class="bg-white h-full  m-auto">Vendredi<div>
+    
+        `
+        
+    
+        
+
+    })
+    download.addEventListener("click", ()=>{
+        download.classList.add("bg-gradient-to-r")
+        download.classList.add("from-gradient3")
+        download.classList.add("from-0%")
+        download.classList.add("via-gradient2")
+        download.classList.add("via-45%")
+        download.classList.add("to-[#df0838]")
+        download.classList.add("text-white")
+
+        vendredi.classList.remove("bg-gradient-to-r")
+        vendredi.classList.remove("from-gradient3")
+        vendredi.classList.remove("from-0%")
+        vendredi.classList.remove("via-gradient2")
+        vendredi.classList.remove("via-45%")
+        vendredi.classList.remove("to-[#df0838]")
+        vendredi.classList.remove("text-white")
+
+        jeudi.classList.remove("bg-gradient-to-r")
+        jeudi.classList.remove("from-gradient3")
+        jeudi.classList.remove("from-0%")
+        jeudi.classList.remove("via-gradient2")
+        jeudi.classList.remove("via-45%")
+        jeudi.classList.remove("to-[#df0838]")
+        jeudi.classList.remove("text-white")
+        jeudi.classList.add("bg-slate-200")
+
+        contenu.innerHTML = `
+           <div class="bg-white h-full  m-auto">download<div>
+        
+        `
+    })
+    
+
+</script>

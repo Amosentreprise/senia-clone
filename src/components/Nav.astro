@@ -1,23 +1,72 @@
 ---
-
+interface Props{
+    lien1:string;
+    lien2:string;
+    lien3:string;
+    lien4:string;
+    lien5:string;
+    lien:string;
+    lien6:string;
+}
+const {lien1, lien2, lien3, lien4, lien5, lien6, lien} = Astro.props;
 ---
-<nav class="w-full mx-auto flex justify-evenly items-center text-white" >
-   <a href=""><img src="/logo-senia.png" alt="" class=" maw-w-[100%] h-[74px] "></a>
-    <ul class="sm:hidden md:hidden lg:flex gap-5 uppercase text-sm font-[500]">
-        <li><a href="/programmes" class="hover:text-gradient1">programmes</a></li>
-        <li><a href="/participation" class="hover:text-gradient1">participation</a></li>
-        <li><a href="/ressources" class="hover:text-gradient1">ressources</a></li>
-        <li><a href="/galerie" class="hover:text-gradient1">galerie</a></li>
-        <li><a href="/contact" class="hover:text-gradient1">contact</a></li>
+<nav class="w-full mx-auto sm:hidden md:hidden lg:flex justify-evenly items-center text-white" >
+   <a href={lien}><img src="/logo-senia.png" alt="" class=" maw-w-[100%] h-[74px] "></a>
+    <ul class="flex gap-5 uppercase text-sm font-[500]">
+        <li><a href={lien1} class="hover:text-gradient1 transform transition duration-100 ease-in hover:scale-75">programmes</a></li>
+        <li><a href={lien2} class="hover:text-gradient1 transform transition duration-100 ease-in hover:scale-75">participation</a></li>
+        <li><a href={lien3} class="hover:text-gradient1 transform transition duration-100 ease-in hover:scale-75">ressources</a></li>
+        <li><a href={lien4} class="hover:text-gradient1 transform transition duration-100 ease-in hover:scale-75">galerie</a></li>
+        <li><a href={lien5} class="hover:text-gradient1 transform transition duration-100 ease-in hover:scale-75">contact</a></li>
     </ul>
-    <a href="">
+    <a href={lien6}>
     <div class="sm:hidden md:hidden lg:block text-sm font-[500] bg-gradient-to-r from-gradient3 from-0% via-gradient2 via-45% to-[#df0838] to-90% hover:bg-gradient-to-r hover:from-[#df0838] hover:from-0%  hover:via-gradient2 hover:via-45% hover:to-gradient3 hover:to-90% transform transition-all ease-in hover:-translate-y-2 p-2 rounded-l-full rounded-tr-full">
        HACKATHON IA
     </div>
 </a>
 </nav>
+
+<nav class="w-full lg:hidden md:flex sm:flex flex-col" >
+    <div class="flex justify-between items-center px-2">
+        <a href={lien}><img src="/logo-senia.png" alt="" class=" maw-w-[80%] h-[40px] "></a>
+        <div class="bg-gradient-to-r from-gradient3 from-0% via-gradient2 via-45% to-[#df0838] to-90% hover:bg-gradient-to-r hover:from-[#df0838] hover:from-0%  hover:via-gradient2 hover:via-45% hover:to-gradient3 hover:to-90% transition-all ease-in  p-2 rounded-l-full rounded-tr-full">
+            <img src="/menu.png" alt="" class="w-8 h-8 p-2" id="button">
+        </div>
+       
+    </div>
+    <div id="menu-mobile" class="fixed inset-0  z-50 max-w-[300px] transform -translate-x-[300px] transition ease-in-out duration-700 text-white bg-black ">
+        <div class="flex justify-between items-center px-2 py-4">
+            <a href={lien}><img src="/logo-senia.png" alt="" class=" maw-w-[80%] h-[74px] " ></a>
+            <span id="cancel" class="bg-gradient-to-r from-gradient3 from-0% via-gradient2 via-45% to-[#df0838] to-90% hover:bg-gradient-to-r hover:from-[#df0838] hover:from-0%  hover:via-gradient2 hover:via-45% hover:to-gradient3 hover:to-90% transition-all ease-in p-2"><img src="/cancel.png" alt="" class="w-8 h-8"></span>
+        </div>
+        <ul class="px-2 flex flex-col gap-5 uppercase text-sm font-[500]">
+            <li><a href={lien1} class="hover:text-gradient1">programmes</a></li>
+            <li><a href={lien2} class="hover:text-gradient1">participation</a></li>
+            <li><a href={lien3} class="hover:text-gradient1">ressources</a></li>
+            <li><a href={lien4} class="hover:text-gradient1">galerie</a></li>
+            <li><a href={lien5} class="hover:text-gradient1">contact</a></li>
+            <li><a href={lien6} class="hover:text-gradient1">HACKATHON IA</a></li>
+        </ul> 
+        
+    </div>
+    
+</nav>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script is:inline>
     AOS.init();
+
+   
 </script>
+<script is:inline>
+     const button = document.getElementById("button");
+     const cancel = document.getElementById("cancel");
+    const menu = document.getElementById("menu-mobile");
+    button.addEventListener("click", ()=>{
+        menu.classList.add("translate-x-[0px]")
+    })
+    cancel.addEventListener("click", ()=>{
+        menu.classList.remove("translate-x-[0px]")
+    })
+</script>
+
